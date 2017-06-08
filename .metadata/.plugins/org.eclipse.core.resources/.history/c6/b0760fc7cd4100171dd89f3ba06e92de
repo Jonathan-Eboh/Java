@@ -1,0 +1,25 @@
+
+public class Earth {
+	public static void main(String args[]){
+		//Entry point for all java programs
+		//code executed line by line within this main method
+		
+		Human tom;
+		
+		tom = new Human(); //tom is just a variable
+		tom.age = 5;
+		tom.eyeColor = "brown";
+		tom.heightInInches = 72;
+		tom.name = "Tom Zsabo";
+		tom.speak();
+		
+		
+		Human Joe = new Human(); //Joe is just a variable
+		Joe.age = 10;
+		Joe.eyeColor = "green";
+		Joe.heightInInches = 100;
+		Joe.name = "Joe GI";
+		Joe.speak();
+		
+	}
+}

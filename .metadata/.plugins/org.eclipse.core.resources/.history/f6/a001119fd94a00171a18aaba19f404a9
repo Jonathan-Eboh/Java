@@ -1,0 +1,11 @@
+
+public class Animal {
+//general attributes and behaviors that all animals have
+
+	String type;
+	int age;
+	int weight;
+	String furColor;
+	
+		
+}

@@ -1,0 +1,7 @@
+package adt;
+
+public class Counter2 {
+
+	private String name = null;
+	private int value = 0;
+}

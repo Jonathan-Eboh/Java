@@ -1,0 +1,14 @@
+
+public class Earth {
+	public static void main(String args[]){
+		//Entry point for all java programs
+		//code executed line by line within this main method
+		
+		Human tom;
+		
+		tom = new Human(); //tom is just a variable
+		tom.speak();
+		
+		
+	}
+}

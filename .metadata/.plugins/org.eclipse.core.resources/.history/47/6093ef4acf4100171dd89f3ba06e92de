@@ -1,0 +1,26 @@
+
+public class Earth {
+	public static void main(String args[]){
+		//Entry point for all java programs
+		//code executed line by line within this main method
+		
+//		Human tom;//tom is just a variable here (an instance variable)
+//		
+//		tom = new Human(); //the object is created when the applications runs
+//		tom.age = 5;
+//		tom.eyeColor = "brown";
+//		tom.heightInInches = 72;
+//		tom.name = "Tom Zsabo";
+//		tom.speak();
+//		
+//		
+//		Human Joe = new Human(); //declaration and assignment can be done...
+//		//on the same line
+//		Joe.age = 10;
+//		Joe.eyeColor = "green";
+//		Joe.heightInInches = 100;
+//		Joe.name = "Joe GI";
+//		Joe.speak();
+//		
+	}
+}

@@ -1,0 +1,18 @@
+package adt;
+
+public class Counter {
+	
+	String str;
+	int Counter = 0;
+	
+	public Counter(String str, int Counter) {
+		super();
+		this.str = str;
+		this.Counter = 0;
+	}
+	
+	int getCurrentValue(){
+		return Counter;
+	}
+
+}
