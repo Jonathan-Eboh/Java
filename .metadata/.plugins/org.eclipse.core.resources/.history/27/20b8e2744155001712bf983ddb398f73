@@ -1,0 +1,10 @@
+package ds.singlyLinkedList;
+
+public class App {
+
+	public static void main(String[] args) {
+		SinglyLinkedList myList = new SinglyLinkedList();
+//		System.out.println(myList.isEmpty());
+	}
+
+}

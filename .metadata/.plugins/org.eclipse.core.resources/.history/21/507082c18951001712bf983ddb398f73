@@ -1,0 +1,19 @@
+package ds.linkedList;
+
+public class App {
+
+	public static void main(String[] args) {
+		Node firstNode = new Node(30);
+		Node secondNode = new Node(40);
+		Node thirdNode = new Node(50);
+		Node fourthNode = new Node(60);
+		
+		//linking the nodes 
+		firstNode.next = secondNode;
+
+		LinkedList myList = new LinkedList(firstNode);
+		
+		myList.Show();
+	}
+
+}

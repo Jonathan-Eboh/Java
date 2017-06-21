@@ -1,0 +1,10 @@
+package ds.linkedList;
+
+public class App {
+
+	public static void main(String[] args) {
+		Node firstNode = new Node(30);
+		LinkedList myList = new LinkedList(firstNode);
+	}
+
+}

@@ -1,0 +1,14 @@
+package ds.linkedList;
+
+public class LinkedList {
+
+//	private int value;
+//	private Node next;
+	
+	
+	
+	public LinkedList(Node newNode ){
+		this.head = newNode;
+	}
+	
+}

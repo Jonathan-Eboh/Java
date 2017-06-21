@@ -1,0 +1,21 @@
+package ds.linkedList;
+
+public class LinkedList {
+
+//	private int value;
+//	private Node next;
+	private Node head;
+	private Node tail;
+	
+	
+	public LinkedList(Node newNode ){
+		this.head = newNode;
+		this.tail = null;
+	}
+	
+	public void Show(){
+		
+		System.out.println(this.head);
+	}
+	
+}
