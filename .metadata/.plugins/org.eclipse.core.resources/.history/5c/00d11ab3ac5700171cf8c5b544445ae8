@@ -1,0 +1,14 @@
+package algo.binarySearch;
+
+
+//For a binary search to work the data must first be SORTED----if it not sorted you must use a linear search
+
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

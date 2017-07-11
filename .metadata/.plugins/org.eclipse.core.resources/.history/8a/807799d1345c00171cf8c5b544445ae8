@@ -1,0 +1,17 @@
+package algo.binarySearchAlt;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	// just an alternate way to write the binary search method
+	
+	
+	public static int binarySearchAlt(int [] arr, int x){
+		
+		return -1;
+	}
+
+}

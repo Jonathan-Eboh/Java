@@ -1,0 +1,16 @@
+package algo.linearSearch;
+//methods start with lowercase
+//constructors start with uppercase
+public class linearSearch {
+	
+	int[] arr;
+	int target;
+	
+	public linearSearch(int[] arr, int target) {//the fuck?
+		super();
+		this.arr = arr;
+		this.target = target;
+	}
+	
+	
+}

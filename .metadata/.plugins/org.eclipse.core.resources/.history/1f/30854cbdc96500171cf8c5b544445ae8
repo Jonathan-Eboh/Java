@@ -1,0 +1,26 @@
+package algo.mergeSort;
+
+public class MergeSort {
+	
+	public static void sort(int[] inputArray) { // mergeSort calls sort which is defined below
+		sort(inputArray, 0, inputArray.length-1);
+	}
+	
+	public static void sort(int inputArray[], int start, int end) {
+		if(end <= start){
+			return; // we're done traversing the array
+		}
+		
+		int mid = (start + end)/2;
+		sort(inputArray, start, mid); // sort left half
+		sort(inputArray,mid +1, end); // sort right half
+		merge(inputArray, start, end); // merge sorted results into the inputArray
+	}
+	
+	public static void merge(int inputArray[], int start, int mid, int end){
+		int tempArray[] = new int [end - start +1]; //when this math is performed it will be one less than the value we actually want which is the number of slots that we currently have
+		
+		int leftSlot = start; //first slot on the left of the array
+	}
+	
+}
