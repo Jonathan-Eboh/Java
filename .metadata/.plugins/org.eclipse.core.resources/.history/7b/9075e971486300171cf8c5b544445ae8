@@ -1,9 +1,0 @@
-package algo.insertionSort;
-
-public class App {
-
-	public static void main(String[] args) {
-
-	}
-
-}

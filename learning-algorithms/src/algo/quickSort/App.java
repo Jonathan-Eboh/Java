@@ -14,8 +14,8 @@ public class App {
 	public static void quickSort(int [] inputArray, int start, int end){
 		if(start < end){
 			int q = partition(inputArray, start, end); //q here represents our partition point
-			quickSort(inputArray, start, q - 1); //before pivot or first half
-			quickSort(inputArray, q + 1, end);//after pivot or second half
+			quickSort(inputArray, start, q - 1); //before pivot or first half/left half
+			quickSort(inputArray, q + 1, end);//after pivot or second half/right half
 		}
 	}
 	
