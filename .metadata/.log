@@ -466,3 +466,552 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
+!SESSION 2017-08-08 15:35:02.010 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/joneboh/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/joneboh/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-08-08 15:35:20.565
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2017-08-08 15:36:00.133
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: dev.eclipse.org: nodename nor servname provided, or not known. ; version: 2.0.4.v20170307-1435
+!STACK 0
+java.net.UnknownHostException: dev.eclipse.org: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:111)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.745
+!MESSAGE An internal error occurred during: "Load index:/org.eclipse.projects.setup".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eDynamicIsSet(BasicEObjectImpl.java:1275)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1257)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eIsSet(ModelElementImpl.java:209)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1241)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.hasNext(EContentsEList.java:437)
+	at org.eclipse.emf.common.util.AbstractTreeIterator.next(AbstractTreeIterator.java:139)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.visit(ResourceMirror.java:275)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:246)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.746
+!MESSAGE An internal error occurred during: "Load https://github.com/meysholdt/Xpect/raw/master/org.xpect.releng/Xpect.setup".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eDynamicIsSet(BasicEObjectImpl.java:1275)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1257)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eIsSet(ModelElementImpl.java:209)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1241)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.hasNext(EContentsEList.java:437)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.next(EContentsEList.java:595)
+	at org.eclipse.emf.common.util.AbstractTreeIterator.next(AbstractTreeIterator.java:133)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.visit(ResourceMirror.java:275)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:246)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.752
+!MESSAGE An internal error occurred during: "Load https://raw.githubusercontent.com/groovy/groovy-eclipse/master/groovy-eclipse.setup".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eDynamicIsSet(BasicEObjectImpl.java:1275)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1257)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eIsSet(ModelElementImpl.java:209)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1241)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.hasNext(EContentsEList.java:437)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.next(EContentsEList.java:595)
+	at org.eclipse.emf.common.util.AbstractTreeIterator.next(AbstractTreeIterator.java:133)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.visit(ResourceMirror.java:275)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:246)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.753
+!MESSAGE An internal error occurred during: "Load https://raw.githubusercontent.com/JanKoehnlein/FXDiagram/master/de.fxdiagram.docs/FXDiagram.setup".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eDynamicIsSet(BasicEObjectImpl.java:1275)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1257)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eIsSet(ModelElementImpl.java:209)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1241)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.hasNext(EContentsEList.java:437)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.next(EContentsEList.java:595)
+	at org.eclipse.emf.common.util.AbstractTreeIterator.next(AbstractTreeIterator.java:133)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.visit(ResourceMirror.java:275)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:246)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.756
+!MESSAGE An internal error occurred during: "Load https://raw.githubusercontent.com/LorenzoBettini/xsemantics/master/devtools/it.xsemantics.workspace/Xsemantics.setup".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eDynamicIsSet(BasicEObjectImpl.java:1275)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1257)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eIsSet(ModelElementImpl.java:209)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1241)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.hasNext(EContentsEList.java:437)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.next(EContentsEList.java:595)
+	at org.eclipse.emf.common.util.AbstractTreeIterator.next(AbstractTreeIterator.java:133)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.visit(ResourceMirror.java:275)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:246)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.759
+!MESSAGE An internal error occurred during: "Load https://raw.githubusercontent.com/LorenzoBettini/javamm/master/javamm.workspace/Javamm.setup".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eDynamicIsSet(BasicEObjectImpl.java:1275)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1257)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eIsSet(ModelElementImpl.java:209)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1241)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.hasNext(EContentsEList.java:437)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.next(EContentsEList.java:595)
+	at org.eclipse.emf.common.util.AbstractTreeIterator.next(AbstractTreeIterator.java:133)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.visit(ResourceMirror.java:275)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:246)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.794
+!MESSAGE An internal error occurred during: "Load https://raw.githubusercontent.com/LorenzoBettini/jbase/master/jbase.workspace/Jbase.setup".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eDynamicIsSet(BasicEObjectImpl.java:1275)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1257)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eIsSet(ModelElementImpl.java:209)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1241)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.hasNext(EContentsEList.java:437)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.next(EContentsEList.java:595)
+	at org.eclipse.emf.common.util.AbstractTreeIterator.next(AbstractTreeIterator.java:133)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.visit(ResourceMirror.java:275)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:246)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.805
+!MESSAGE An internal error occurred during: "Load https://raw.githubusercontent.com/m2e-code-quality/m2e-code-quality/master/m2e-code-quality.setup".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eDynamicIsSet(BasicEObjectImpl.java:1275)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1257)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eIsSet(ModelElementImpl.java:209)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eIsSet(BasicEObjectImpl.java:1241)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.hasNext(EContentsEList.java:437)
+	at org.eclipse.emf.ecore.util.EContentsEList$FeatureIteratorImpl.next(EContentsEList.java:595)
+	at org.eclipse.emf.common.util.AbstractTreeIterator.next(AbstractTreeIterator.java:133)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.visit(ResourceMirror.java:275)
+	at org.eclipse.oomph.setup.internal.core.util.ResourceMirror$LoadJob.perform(ResourceMirror.java:246)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.896
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.897
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.899
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.899
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.900
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.900
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.901
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:01.902
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:02.101
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:02.101
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:02.103
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:02.103
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:02.104
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:02.104
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:02.105
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-08-08 15:36:02.106
+!MESSAGE An internal error occurred during: "Resolver".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.emf.ecore.impl.EStructuralFeatureImpl.getSettingDelegate(EStructuralFeatureImpl.java:845)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eSettingDelegate(BasicEObjectImpl.java:1565)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1027)
+	at org.eclipse.oomph.base.impl.ModelElementImpl.eGet(ModelElementImpl.java:157)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1011)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:1003)
+	at org.eclipse.emf.ecore.impl.BasicEObjectImpl.eGet(BasicEObjectImpl.java:998)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:147)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.visit(ProxyResolver.java:219)
+	at org.eclipse.oomph.setup.internal.core.util.ProxyResolver$ResolveJob.perform(ProxyResolver.java:129)
+	at org.eclipse.oomph.util.WorkerPool$Worker.run(WorkerPool.java:428)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-08-08 16:15:33.001
+!MESSAGE Unknown Host: http://download.eclipse.org/releases/neon/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-08-08 16:16:03.033
+!MESSAGE Unknown Host: https://dl.bintray.com/jetbrains/kotlin/eclipse-plugin/last/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: dl.bintray.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-08-08 16:16:33.049
+!MESSAGE Unknown Host: http://download.eclipse.org/eclipse/updates/4.6/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-08-08 16:16:33.416
+!MESSAGE Unknown Host: http://download.eclipse.org/oomph/updates/milestone/latest/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
