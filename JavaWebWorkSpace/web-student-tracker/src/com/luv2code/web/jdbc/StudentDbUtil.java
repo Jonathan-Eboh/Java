@@ -163,4 +163,10 @@ public class StudentDbUtil {
 			close(myConn, myStmt, myRs);
 		}		
 	}
+
+	public void updateStudent(Student theStudent) {
+		// TODO Auto-generated method stub
+		
+		//do nothing for now ...
+	}
 }
