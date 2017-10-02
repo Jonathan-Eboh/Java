@@ -99,7 +99,7 @@ public class StudentControllerServlet extends HttpServlet {
 			// create a new student object
 			Student theStudent = new Student(id, firstName, lastName, email);
 			
-			// perform update on data base
+			// perform update on database
 			studentDbUtil.updateStudent(theStudent);
 			
 			//send them back to the "list students" page
