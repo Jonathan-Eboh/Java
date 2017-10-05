@@ -7,8 +7,8 @@ package ch1_Arrays_and_Strings;
 
 //1) iterate through string
 //2) grab individual char from string
-//3)check every char in the string against the current char
-//4) if nothing is the same as the char then reture true
+//3) check every char in the string against the current char
+//4) if nothing is the same as the char then return true
 //5) otherwise return false
 
 
@@ -29,18 +29,26 @@ public class Pb1_is_Unique {
 		System.out.println( isUnique( word4 ));
 		System.out.println( isUnique( word5 ));
 		System.out.println( isUnique( word6 ));
+		System.out.println("The ASCII version of the algorithm:");
+		System.out.println( isUniqueASCII( word1 ));
+		System.out.println( isUniqueASCII( word2 ));
+		System.out.println( isUniqueASCII( word3 ));
+		System.out.println( isUniqueASCII( word4 ));
+		System.out.println( isUniqueASCII( word5 ));
+		System.out.println( isUniqueASCII( word6 ));
+		
 
 	}
 	
-	// my solution, this first the constraint of not being able to use additional data structures
-	//the run time is O(n^2) this is because its utilizing two loops through the same array (even though we are only ever checking i- 1 elements the second time we loop through the array)
-	//things I missed, the edgecase/ shortcut that checks to see if the string that was passed in has a lenght that exceeds the maximum number of unique character available
+	// my solution, this fits the constraint of not being able to use additional data structures
+	//the run time is O(n^2) this is because its utilizing two loops through the same array (even though we are only ever checking i- 1 elements the second time we loop through the array) 
+	//things I missed, the edgecase/ shortcut that checks to see if the string that was passed in has a length that exceeds the maximum number of unique character available. Also missed that the space complexity is O(1)
 	
-	public static boolean isUnique ( String word ){ //static so we dont have to make a new instance of a class everytime we call isUnique
+	public static boolean isUnique ( String word ){ //static so we dont have to make a new instance of a class every time we call isUnique
 		for (int i = 0 ; i < word.length() ; i++){
 			char Char = word.charAt(i);
-			for(int j = i+1; j < word.length(); j++){
-				if(Char == word.charAt(j)){
+			for(int j = i+1; j < word.length(); j++){ //i+1 because we dont need to compare a given letter to itself
+				if(Char == word.charAt(j)){ //if the current character (the one we initially grab) is the same as the current character we are looking at in j then that means there is a duplicate and we need to return false.
 					return false;
 				}
 			}
@@ -48,9 +56,26 @@ public class Pb1_is_Unique {
 		return true;
 	}
 	
+	/*
+	 * The time complexity of this version of the program is O(n) where n is the length of the string
+	 * The space complexity is O(1) because we create an array of size 128 and the size of that array does not change at 		any point throughout the program
+	 */
+	
 	public static boolean isUniqueASCII( String word){
-		if (word.length() > 128 ) return false; //here we are using the 128 char ASCII table, could also use the 256 for the extended table as opposed to the printable one
-		return false;
+		if (word.length() > 128 ) return false; //here we are using the 128 char ASCII table, could also use the 256 for 		the extended table as opposed to the printable one so if our string is longer than the amount of unique 				characters then we automatically know it must have at least one duplicate
+		boolean[] char_set = new boolean[128]; //instantiating a new  array of 128 boolean indices
+		for(int i = 0; i < word.length(); i++){ //looping through the array
+			int charVal = word.charAt(i);// utilizing a property of java called 'widening primitive conversion' to make 				charVal be set to the ASCII value of the character at the given index i 
+			if (char_set[charVal]) { //if this is true then we have already found this char in the string....
+				return false; // so we return false
+			}
+			char_set[charVal] = true; // this step is key, if its not in the array we set the boolean value at the index 			corresponding to THAT ASCII value to be true so that if we encounter that ASCII value again we know that we 			have seen it before
+		}
+		
+		
+		return true; //if all is well return true and the string is concluded to be unique
 	}
+	
+	
 
 }

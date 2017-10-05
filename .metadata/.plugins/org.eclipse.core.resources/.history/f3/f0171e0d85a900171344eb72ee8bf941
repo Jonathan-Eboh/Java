@@ -1,0 +1,10 @@
+package ch1_Arrays_and_Strings;
+
+public class Pb2_Check_Permutation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

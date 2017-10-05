@@ -1,0 +1,26 @@
+package ch1_Arrays_and_Strings;
+
+//Given two string, write a method to decide if one is a permutation of the other.
+
+//Key words, need to make sure a string is a permutation of the one its compared to because of this casing will matter
+
+public class Pb2_Check_Permutation {
+
+	public static void main(String[] args) {
+		String word1 = "Cat"; 
+		String word2 = "taC";
+		//comparing the above two should return true
+		String word3 = "dog";
+		String word4 = "ogd";
+		//comparing the above two should return true
+		String word5 = "fan";
+		String word6 = "fann";
+		//comparing the above two should return false
+
+	}
+	
+	public boolean isPermutation(String word1, String word2){
+		return false;
+	}
+
+}
