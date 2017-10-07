@@ -1,0 +1,22 @@
+package ch1_Arrays_and_Strings;
+//Write a method to replace all spaces in a string with '%20'.
+//using java so need to us a character array so that you can preform the operation in place
+
+
+//
+
+
+
+public class Pb3_URLify {
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	public static String urlify(String regString){
+		
+		return "return";
+	}
+
+}

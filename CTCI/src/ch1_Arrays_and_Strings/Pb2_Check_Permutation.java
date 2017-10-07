@@ -30,15 +30,75 @@ public class Pb2_Check_Permutation {
 		String word9 = "ggg";
 		String word10 = "ggh";
 		//comparing the above two should return false
+		
+		//---------------------------------------------------------------------
+		
+		System.out.println( isPermutationTwo(word1, word2)); //true
+		System.out.println( isPermutationTwo(word3, word4)); //true
+		System.out.println( isPermutationTwo(word5, word6)); //false
+		System.out.println( isPermutationTwo(word7, word8)); //false
+		System.out.println( isPermutationTwo(word9, word10)); //false
+		
+	//---------------------------------------------------------------------
+		System.out.println("using the char counting method: ");
+		System.out.println( isPermutationCharCount(word1, word2)); //true
+		System.out.println( isPermutationCharCount(word3, word4)); //true
+		System.out.println( isPermutationCharCount(word5, word6)); //false
+		System.out.println( isPermutationCharCount(word7, word8)); //false
+		System.out.println( isPermutationCharCount(word9, word10)); //false
 
 	}
 	
-	public boolean isPermutation(String wordOne, String wordTwo){
+	public static boolean isPermutationExplicit(String wordOne, String wordTwo){
 		if(wordOne.length() != wordTwo.length()) return false; //if the strings arnt the same length then they arnt permutations
 		
+		// this is to sort the words alphabetically 
+		char[] charsOne = new char[wordOne.length()];
+		char[] charsTwo = new char[wordTwo.length()];
 		
+		for (int i = 0; i < charsOne.length; i++) {
+			charsOne[i] = wordOne.charAt(i);
+		}
+		
+		for (int i = 0; i < charsTwo.length; i++) {
+			charsTwo[i] = wordOne.charAt(i);
+		}
 		
 		return false;
 	}
-
+	
+//---------------------------------------------------------------------
+	//method to sort the strings passed in
+	public static String sort(String wordToSort){
+		char[] content = wordToSort.toCharArray(); //makes a char array out of the string passes in called content
+		java.util.Arrays.sort(content); //will sort the array alphabetically
+		return new String(content); //returns content as a string by utilizing the fact that in java we can create a string object by passing the array name to the constructor
+	}
+	
+	public static boolean isPermutationTwo(String wordOne, String wordTwo){
+		if (wordOne.length() != wordTwo.length()) return false; //if they arnt the same length they arnt permutations
+		 return sort(wordOne).equals(sort(wordTwo)); //this uses method chaning to see if the final stirngs are equal to one another.
+	}
+//---------------------------------------------------------------------
+	
+	public static boolean isPermutationCharCount(String wordOne, String wordTwo){
+		if(wordOne.length() != wordTwo.length() )return false;
+		
+		int[] letters = new int[128]; // This is assuming we are using the 128 char ASCII table
+		
+		char[] wordOneArr = wordOne.toCharArray(); //making an array of chars using the first string
+		for (char c : wordOneArr) { //This is the java syntax for a "for each loop"
+			letters[c]++; // for each character in the wordOneArr increment the count for that specific char by one every time its encountered
+		}
+		for (int i = 0; i < wordTwo.length(); i++) {
+			int charCount = (int) wordTwo.charAt(i); // casting charAt as an int will make it return the index instead of the letter itself. this number is being stored in charCount so that by the time the index of the last char is stored it is equal to the amount of total chars in that string
+			letters[charCount]--;
+			if(letters[charCount] < 0){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
 }

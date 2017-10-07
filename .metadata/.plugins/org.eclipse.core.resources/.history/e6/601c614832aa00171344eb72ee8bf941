@@ -1,0 +1,92 @@
+package ch1_Arrays_and_Strings;
+
+//Given two string, write a method to decide if one is a permutation of the other.
+
+//Key words, need to make sure a string is a permutation of the one its compared to because of this casing will matter
+// define what it means to be a permutation:
+// -1 the two strings are of equal length
+// -2 the two strings contain the same characters in any order allowed by the factorial(probably should not use factorial as it will increase the run time to calculate the factorial of a given string) of the string length
+
+//because of the situation where a string may have duplicate chars I will probably need a hash table
+
+//1) first thing we can do off the bat is compare the lengths of the two strings, if there are different just return false
+//2) if they get past that check
+
+public class Pb2_Check_Permutation {
+
+	public static void main(String[] args) {
+		String word1 = "Cat"; 
+		String word2 = "taC";
+		//comparing the above two should return true
+		String word3 = "dog";
+		String word4 = "ogd";
+		//comparing the above two should return true
+		String word5 = "fan";
+		String word6 = "fann";
+		//comparing the above two should return false
+		String word7 = "look";
+		String word8 = "book";
+		//comparing the above two should return false
+		String word9 = "ggg";
+		String word10 = "ggh";
+		//comparing the above two should return false
+		
+		//---------------------------------------------------------------------
+		
+		System.out.println( isPermutationTwo(word1, word2)); //true
+		System.out.println( isPermutationTwo(word3, word4)); //true
+		System.out.println( isPermutationTwo(word5, word6)); //false
+		System.out.println( isPermutationTwo(word7, word8)); //false
+		System.out.println( isPermutationTwo(word9, word10)); //false
+
+	}
+	
+	public static boolean isPermutationExplicit(String wordOne, String wordTwo){
+		if(wordOne.length() != wordTwo.length()) return false; //if the strings arnt the same length then they arnt permutations
+		
+		// this is to sort the words alphabetically 
+		char[] charsOne = new char[wordOne.length()];
+		char[] charsTwo = new char[wordTwo.length()];
+		
+		for (int i = 0; i < charsOne.length; i++) {
+			charsOne[i] = wordOne.charAt(i);
+		}
+		
+		for (int i = 0; i < charsTwo.length; i++) {
+			charsTwo[i] = wordOne.charAt(i);
+		}
+		
+		return false;
+	}
+	
+//---------------------------------------------------------------------
+	//method to sort the strings passed in
+	public static String sort(String wordToSort){
+		char[] content = wordToSort.toCharArray(); //makes a char array out of the string passes in called content
+		java.util.Arrays.sort(content); //will sort the array alphabetically
+		return new String(content); //returns content as a string by utilizing the fact that in java we can create a string object by passing the array name to the constructor
+	}
+	
+	public static boolean isPermutationTwo(String wordOne, String wordTwo){
+		if (wordOne.length() != wordTwo.length()) return false; //if they arnt the same length they arnt permutations
+		 return sort(wordOne).equals(sort(wordTwo)); //this uses method chaning to see if the final stirngs are equal to one another.
+	}
+//---------------------------------------------------------------------
+	
+	public static boolean isPermutationCharCount(String wordOne, String wordTwo){
+		if(wordOne.length() != wordTwo.length() )return false;
+		
+		int[] letters = new int[128]; // This is assuming we are using the 128 char ASCII table
+		
+		char[] wordOneArr = wordOne.toCharArray(); //making an array of chars using the first string
+		for (char c : wordOneArr) { //This is the java syntax for a "for each loop"
+			letters[c]++; // for each character in the wordOneArr increment the count for that specific char by one every time its encountered
+		}
+		for (int i = 0; i < wordTwo.length(); i++) {
+			int charCount = (int) wordTwo.charAt(i);
+		}
+		
+		return true;
+	}
+	
+}
